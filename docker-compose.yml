@@ -1,0 +1,19 @@
+version: '3'
+services:
+  postgres:
+    image: postgres
+    container_name: meu-postgres
+    environment:
+      POSTGRES_PASSWORD: minha_senha
+      POSTGRES_USER: postgres
+      POSTGRES_DB: meu_banco_de_dados
+    ports:
+      - '5433:5432'
+    networks:
+      - bridge
+    volumes:
+      - ./data:/var/lib/postgresql/data
+
+networks:
+  bridge:
+    driver: bridge
