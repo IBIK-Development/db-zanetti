@@ -2,11 +2,11 @@ version: '3'
 services:
   postgres:
     image: postgres
-    container_name: meu-postgres
+    container_name: omni
     environment:
-      POSTGRES_PASSWORD: minha_senha
-      POSTGRES_USER: postgres
-      POSTGRES_DB: meu_banco_de_dados
+      POSTGRES_PASSWORD: omni
+      POSTGRES_USER: omni
+      POSTGRES_DB: db_omni
     ports:
       - '5433:5432'
     networks:
